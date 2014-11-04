@@ -1,5 +1,6 @@
 package game;
 
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -25,6 +26,7 @@ public class Jogo extends JFrame{
 		
 		PainelJogo = new JPanel(); // Cria um Painel
 		PainelJogo.setLayout(new GridLayout(3, 3, 10, 10));//Atribui um Layout do tipo gridlayot
+		PainelJogo.setBackground( new Color(107, 106, 104));
 		cor = new JButton(); // Botao para restaurar a cor do outros botoes
 		
 		botoes = new JButton[9];//Cria um vector com tamanho 9 
@@ -112,8 +114,9 @@ public class Jogo extends JFrame{
 		});
 		PainelJogo.add(botoes[6]); //add o botao ao painel
 		
-		botoes[7].setFont(new Font("Calibri", Font.BOLD, 70)); // determina a fonte do botão
+		botoes[7].setFont(new Font("Calibri", Font.BOLD, 70)); // determina a fonte do botão		
 		botoes[7].addActionListener(new ActionListener() { //atribui uma açao ao botao
+		
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
